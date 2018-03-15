@@ -1,4 +1,4 @@
-package com.example.authServer.security;
+package com.wilderpereira.oauth2example.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

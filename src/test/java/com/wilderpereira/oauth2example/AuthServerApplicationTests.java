@@ -1,4 +1,4 @@
-package com.example.authServer;
+package com.wilderpereira.oauth2example;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

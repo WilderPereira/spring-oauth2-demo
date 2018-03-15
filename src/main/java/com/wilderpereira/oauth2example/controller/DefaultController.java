@@ -1,4 +1,4 @@
-package com.example.authServer.controller;
+package com.wilderpereira.oauth2example.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

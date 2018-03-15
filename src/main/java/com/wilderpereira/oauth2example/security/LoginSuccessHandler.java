@@ -1,4 +1,4 @@
-package com.example.authServer.security;
+package com.wilderpereira.oauth2example.security;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
