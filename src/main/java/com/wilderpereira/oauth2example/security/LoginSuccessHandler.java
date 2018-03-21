@@ -63,9 +63,9 @@ public class LoginSuccessHandler
         }
 
         if (isUser) {
-            return "/user.html";
+            return "/looqbox.html";
         } else if (isAdmin) {
-            return "/user.html";
+            return "/looqbox.html";
         } else {
             throw new IllegalStateException();
         }

@@ -18,10 +18,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.requestMatchers()
-                .antMatchers("/login", "/oauth/authorize", "/", "/user")
+                .antMatchers("/login", "/oauth/authorize", "/", "/user", "/looqbox")
                 .and()
                 .authorizeRequests()
                 .anyRequest().authenticated()
+                .and().headers().frameOptions().disable()
                 .and()
                 .formLogin().permitAll();
     }

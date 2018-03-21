@@ -14,4 +14,10 @@ public class DefaultController {
         model.addAttribute("principal", principal.getName());
         return "/user";
     }
+
+    @GetMapping("/looqbox")
+    public String looqbox(Model model, Principal principal) {
+        model.addAttribute("principal", principal.getName());
+        return "/looqbox";
+    }
 }

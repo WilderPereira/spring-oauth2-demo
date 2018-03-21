@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#btnFrameLoader").click(function(){
+                var iframe = $("#looqFrame");
+                iframe.attr("src", iframe.data("src"));
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <div>
+            <h2 th:inline="text">User: [[${#httpServletRequest.remoteUser}]]!</h2>
+            Welcome, <span th:text="${principal}">Name</span>
+
+            <iframe id="looqFrame" data-src="http://localhost:8080/login/sso" src="about:blank"
+                    style="width:100%; height: 550px" allowfullscreen="" frameborder="1">
+            </iframe>
+        </div>
+        <button id="btnFrameLoader">Start Looqbox</button>
+    </div>
+</body>
+</html>
