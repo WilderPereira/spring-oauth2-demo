@@ -17,6 +17,9 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 @Configuration
 public class ResourceServer extends ResourceServerConfigurerAdapter {
 
+    @Autowired
+    private CustomTokenConverter tokenEnhancer;
+
     @Override
     public void configure(ResourceServerSecurityConfigurer config) {
         config.tokenServices(tokenServices());
@@ -39,6 +42,8 @@ public class ResourceServer extends ResourceServerConfigurerAdapter {
     public DefaultTokenServices tokenServices() {
         DefaultTokenServices defaultTokenServices = new DefaultTokenServices();
         defaultTokenServices.setTokenStore(tokenStore());
+        defaultTokenServices.setTokenEnhancer(accessTokenConverter());
+        defaultTokenServices.setTokenEnhancer(tokenEnhancer);
         return defaultTokenServices;
     }
 
